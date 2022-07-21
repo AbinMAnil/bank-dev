@@ -4,6 +4,9 @@ import Image from 'next/image';
 import Router from 'next/router';
 import React from 'react';
 import Api from '../services/axios';
+import SVG from './SvgComponent';
+
+
 
 
 const UserLogin = () => {
@@ -29,7 +32,10 @@ const UserLogin = () => {
   return (
     <div className="loginWraper">
       <div className="form">
-        <div className="imageWarper"><Image id='loginPageImage' src="/../public/bank.jpg" alt="me" width="270" height="350" /></div>
+        <div className="imageWarper">
+          {SVG}
+
+          <img id='loginPageImage' src={'../public/assets/svg.png'} alt="me" width="270" height="350" /></div>
 
         <div className="rightItems">
 

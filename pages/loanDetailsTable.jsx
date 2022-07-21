@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { CloudDownloadOutlined, DeleteOutlined, DownloadOutlined, EditOutlined, EyeOutlined } from '@ant-design/icons';
+import { DeleteOutlined, EditOutlined, EyeOutlined } from '@ant-design/icons';
 import CommonHeader from "../components/commonHeader";
 import api from "../services/axios";
 import { useRouter } from "next/router";
-import { Button, Divider, Table, Tooltip } from "antd";
+import { Button, Divider, Table } from "antd";
 import PopUpConfirmation from "../components/popUpConfirmation";
 
 const columns = [
@@ -60,7 +60,7 @@ const LoanDetails = () => {
 
   const createActionComponent = (data) => {
     return <span style={{ display: "flex", justifyContent: "space-evenly" }}>
-      <a href={data.filePath} target="_blank" download='new' >  <Button type="danger"  > {<CloudDownloadOutlined />} </Button></a>
+      {/* <a href={data.filePath} target="_blank" download='new' >  <Button type="danger"  > {<CloudDownloadOutlined />} </Button></a> */}
       <Button type="default" onClick={() => redirectToPage(data._id, "/addDetails")} > {<EditOutlined />} </Button>
       <Button type="primary" onClick={() => redirectToPage(data._id, "/viewDetails")} > {<EyeOutlined />} </Button>
       <PopUpConfirmation actionName={<DeleteOutlined />} type="danger" />
